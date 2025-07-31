@@ -1,53 +1,107 @@
+/* Global styles */
 body {
-  font-family: sans-serif;
-  background: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
 }
 
 .app {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
-  width: 300px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 form {
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 input {
   flex: 1;
-  padding: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dee5eb;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-button {
-  padding: 10px;
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"] {
+  padding: 0.75rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 ul {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
 li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: #f0f0f0;
-  padding: 8px;
-  margin-bottom: 8px;
-  border-radius: 5px;
+  background: #f7fafd;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 li.done {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+li:hover {
+  background: #edf3f8;
+}
+
+li button {
+  background: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+li button:hover {
+  background: #e04848;
 }
